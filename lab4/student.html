@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Search</title>
+</head>
+<body>
+    <!-- Form sends a POST request to fetchstudent.php -->
+    <form action="student.php" method="POST">
+        <table cellpadding="10" cellspacing="0" align="center" style="margin-top: 10%;">
+            <caption><strong>Student Fetch</strong></caption>
+            <tr>
+                <td><label for="roll">Roll no:</label></td>
+                <td><input type="text" id="roll" name="roll" placeholder="Type Student roll no"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit">OK</button>
+                    <button type="reset">Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
