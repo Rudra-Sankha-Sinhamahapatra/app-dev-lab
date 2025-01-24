@@ -1,21 +1,21 @@
 <?php
-// Database configuration
-$servername = "localhost"; // Default server
-$username = "root";        // Default username for XAMPP
-$password = "";            // Default password for XAMPP (empty)
-$dbname = "school_site";   // Your database name
 
-// Create connection
+$servername = "localhost"; 
+$username = "root";        
+$password = "";            
+$dbname = "school_site";   
+
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if the form is submitted
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Retrieve form data
+   
     $roll = $_POST['roll'];
     $regno = $_POST['regno'];
     $name = $_POST['name'];
@@ -25,11 +25,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $dob = $_POST['dob'];
     $cgpa = $_POST['cgpa'];
 
-    // Prepare SQL statement to insert data into the `students` table
+
     $sql = "INSERT INTO students (roll, regno, name, address, state, gender, dob, cgpa) 
             VALUES ('$roll', '$regno', '$name', '$address', '$state', '$gender', '$dob', '$cgpa')";
 
-    // Execute the query
+
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully!";
     } else {
@@ -37,6 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Close the connection
+
 $conn->close();
 ?>
