@@ -20,12 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $gender = $_POST['gender'];
     $dob = $_POST['dob'];
     $cgpa = $_POST['cgpa'];
+    $class = $_POST['class'];
 
     if (!empty($roll)) {
     
         $sql = "UPDATE students 
                 SET name = '$name', regno = '$regno', address = '$address', 
-                    state = '$state', gender = '$gender', dob = '$dob', cgpa = '$cgpa'
+                    state = '$state', gender = '$gender', dob = '$dob', cgpa = '$cgpa',class = '$class'
                 WHERE roll = '$roll'";
 
         if ($conn->query($sql) === TRUE) {

@@ -86,6 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type='text' name='gender' value='{$student['gender']}' placeholder='Gender'>
                     <input type='date' name='dob' value='{$student['dob']}' placeholder='Date of Birth'>
                     <input type='number' step='0.01' name='cgpa' value='{$student['cgpa']}' placeholder='CGPA'>
+                    <input type='text' name='class' value='{$student['class']}' placeholder='Class'>
                     <button type='submit' class='update-btn'>Update</button>
                     <button type='reset' class='cancel-btn'>Cancel</button>
                 </form>

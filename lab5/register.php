@@ -24,10 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $gender = $_POST['gender'];
     $dob = $_POST['dob'];
     $cgpa = $_POST['cgpa'];
+    $class = $_POST['class'];
 
 
-    $sql = "INSERT INTO students (roll, regno, name, address, state, gender, dob, cgpa) 
-            VALUES ('$roll', '$regno', '$name', '$address', '$state', '$gender', '$dob', '$cgpa')";
+    $sql = "INSERT INTO students (roll, regno, name, address, state, gender, dob, cgpa,class) 
+            VALUES ('$roll', '$regno', '$name', '$address', '$state', '$gender', '$dob', '$cgpa','$class')";
 
 
     if ($conn->query($sql) === TRUE) {
